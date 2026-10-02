@@ -1,0 +1,779 @@
+css:root {
+    --green: #244c3b;
+    --deep: #17392c;
+    --lime: #d8e8a7;
+    --cream: #f7f6ef;
+    --paper: #fffef9;
+    --muted: #777d72;
+    --line: #dfe2d7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--deep);
+    font-family: "DM Sans", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* Header */
+
+.site-header {
+    height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--paper);
+    border-bottom: 1px solid #e9e9df;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+}
+
+.brand>span:last-child {
+    font-weight: 400;
+    color: #71836d;
+}
+
+.brand-icon {
+    color: #71944d;
+    font-size: 27px;
+    margin-right: 3px;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 36px;
+    color: #5c685d;
+    font-size: 13px;
+}
+
+.site-header nav a:hover,
+.text-link:hover {
+    color: #8aa64f;
+}
+
+.header-cta {
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #d5dbce;
+    border-radius: 30px;
+    padding: 12px 18px;
+}
+
+.header-cta span {
+    margin-left: 12px;
+}
+
+
+/* Hero Section */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    min-height: 625px;
+    padding: 62px 7% 70px;
+    gap: 6%;
+    align-items: center;
+}
+
+.hero-copy {
+    padding: 8px 0;
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    color: #71835e;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eyebrow-line {
+    width: 27px;
+    height: 1px;
+    background: #8da66d;
+}
+
+.hero h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 1.05;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 5.7vw, 78px);
+    margin: 26px 0 20px;
+}
+
+.hero h1 em,
+h2 em {
+    font-weight: 600;
+    color: #78934f;
+}
+
+.hero-description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #70776c;
+    max-width: 390px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    border: 0;
+    border-radius: 4px;
+    padding: 16px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-dark {
+    background: var(--green);
+    color: white;
+}
+
+.button-dark:hover {
+    background: #32634c;
+}
+
+.button span {
+    font-size: 16px;
+}
+
+.text-link {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.text-link span {
+    padding-left: 7px;
+}
+
+.hero-note {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 52px;
+    color: #7c8177;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.hero-note strong {
+    color: var(--deep);
+    font-size: 12px;
+}
+
+.note-icon {
+    width: 29px;
+    height: 29px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #e2ebce;
+    color: #547640;
+}
+
+
+/* Hero Image */
+
+.hero-visual {
+    height: 500px;
+    position: relative;
+}
+
+.hero-visual>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px 90px 3px 3px;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    right: 22px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    text-shadow: 0 1px 8px #263b25;
+}
+
+.image-label span {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.image-label strong {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 68px;
+    left: -35px;
+    background: var(--paper);
+    box-shadow: 0 10px 35px #1d39201c;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 3px;
+}
+
+.floating-leaf {
+    font-size: 31px;
+    color: #78934f;
+}
+
+.floating-card strong,
+.floating-card small {
+    display: block;
+}
+
+.floating-card strong {
+    font-size: 12px;
+}
+
+.floating-card small {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+
+/* Intro Strip */
+
+.intro-strip {
+    min-height: 72px;
+    background: #e7edda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.intro-strip p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #627553;
+}
+
+.strip-dot {
+    color: #8da36d;
+    font-size: 18px;
+}
+
+
+/* Common Section */
+
+.section-wrap {
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+
+/* Plants Section */
+
+.plants-section {
+    padding-top: 105px;
+    padding-bottom: 100px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.section-heading h2,
+.care-copy h2,
+.newsletter h2 {
+    font-size: clamp(37px, 4vw, 52px);
+    margin: 18px 0 0;
+}
+
+.section-summary {
+    max-width: 320px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #777d72;
+    margin: 0 0 4px;
+}
+
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.plant-card {
+    background: var(--paper);
+    padding: 12px 12px 18px;
+    border: 1px solid #ebede5;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px #243d2012;
+}
+
+.plant-photo {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    background: #e7ebdf;
+}
+
+.plant-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.plant-card:hover .plant-photo img {
+    transform: scale(1.04);
+}
+
+.plant-tag {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: #f8f8efdd;
+    padding: 7px 9px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.plant-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 19px 5px 14px;
+}
+
+.plant-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    margin: 0 0 6px;
+}
+
+.plant-info p {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0;
+}
+
+.plant-number {
+    font-size: 11px;
+    color: #98a48c;
+}
+
+.plant-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 13px 5px;
+    font-size: 10px;
+    color: #697466;
+}
+
+.plant-button {
+    border: 0;
+    background: transparent;
+    width: 100%;
+    padding: 15px 5px 0;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--green);
+}
+
+.plant-button span {
+    font-size: 16px;
+}
+
+.fine-print {
+    font-size: 10px;
+    color: #8a8e83;
+    margin-top: 18px;
+}
+
+
+/* Plant Care Section */
+
+.care-section {
+    background: #244c3b;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 620px;
+}
+
+.care-image {
+    min-height: 620px;
+}
+
+.care-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.care-copy {
+    padding: 78px clamp(35px, 7vw, 100px);
+}
+
+.care-copy .eyebrow {
+    color: #c1d49d;
+}
+
+.care-copy h2 {
+    margin-bottom: 36px;
+}
+
+.care-copy h2 em {
+    color: #c7dc9e;
+}
+
+.care-step {
+    display: flex;
+    gap: 19px;
+    padding: 17px 0;
+    border-top: 1px solid #ffffff2c;
+}
+
+.care-step>span {
+    font-size: 11px;
+    color: #c7dc9e;
+    padding-top: 3px;
+}
+
+.care-step h3 {
+    font-size: 13px;
+    margin: 0 0 8px;
+}
+
+.care-step p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #d0d9ce;
+    margin: 0;
+    max-width: 330px;
+}
+
+.button-light {
+    margin-top: 20px;
+    background: #d9e8b3;
+    color: #244c3b;
+}
+
+.button-light:hover {
+    background: #e8f1d1;
+}
+
+
+/* Newsletter Section */
+
+.newsletter {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.newsletter h2 {
+    font-size: 43px;
+}
+
+.newsletter form {
+    width: min(100%, 370px);
+}
+
+.newsletter label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.email-row {
+    display: flex;
+    border-bottom: 1px solid #aeb7a4;
+    margin-top: 12px;
+}
+
+.email-row input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: 0;
+    padding: 13px 0;
+    outline: none;
+    font-size: 12px;
+}
+
+.email-row button {
+    border: 0;
+    background: transparent;
+    font-size: 24px;
+    color: var(--green);
+    cursor: pointer;
+}
+
+.form-message {
+    font-size: 10px;
+    color: #818779;
+    line-height: 1.6;
+}
+
+
+/* Footer */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 26px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p,
+footer>a:last-child {
+    font-size: 10px;
+    color: #7a8176;
+}
+
+footer>a:last-child:hover {
+    color: var(--green);
+}
+
+
+/* Toast Notification */
+
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    background: #17392c;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 0 8px 30px #0002;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s;
+    z-index: 10;
+    max-width: 90%;
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+
+/* Tablet Responsive Design */
+
+@media (max-width: 900px) {
+    .site-header {
+        padding: 0 5%;
+    }
+    .hero {
+        padding: 50px 5%;
+        gap: 4%;
+    }
+    .hero-visual {
+        height: 430px;
+    }
+    .hero h1 {
+        font-size: 58px;
+    }
+    .section-wrap {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .plant-photo {
+        height: 210px;
+    }
+    .care-copy {
+        padding: 60px 35px;
+    }
+    .intro-strip {
+        gap: 20px;
+    }
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 650px) {
+    .site-header {
+        height: 70px;
+    }
+    .site-header nav {
+        display: none;
+    }
+    .header-cta {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+    .brand {
+        font-size: 16px;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 42px;
+        gap: 35px;
+    }
+    .hero h1 {
+        font-size: 60px;
+    }
+    .hero-visual {
+        height: 360px;
+        margin-left: 15px;
+    }
+    .floating-card {
+        left: -15px;
+    }
+    .intro-strip {
+        gap: 10px;
+    }
+    .intro-strip p {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+    .strip-dot {
+        font-size: 13px;
+    }
+    .plants-section {
+        padding-top: 70px;
+        padding-bottom: 65px;
+    }
+    .section-heading {
+        display: block;
+    }
+    .section-summary {
+        margin-top: 20px;
+    }
+    .plant-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .plant-photo {
+        height: 300px;
+    }
+    .care-section {
+        grid-template-columns: 1fr;
+    }
+    .care-image {
+        min-height: 300px;
+        height: 300px;
+    }
+    .care-copy {
+        padding: 55px 7%;
+    }
+    .newsletter {
+        display: block;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+    .newsletter form {
+        margin-top: 35px;
+    }
+    .newsletter h2 {
+        font-size: 39px;
+    }
+    footer {
+        padding: 22px 5%;
+        flex-wrap: wrap;
+    }
+    footer p {
+        order: 3;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
